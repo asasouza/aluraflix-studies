@@ -1,5 +1,6 @@
 // React
 import React from 'react';
+import { Link } from 'react-router-dom';
 // Components
 import ButtonLink from '../ButtonLink';
 // Assets
@@ -10,10 +11,10 @@ import './Menu.css';
 function Menu(props) {
     return (
         <nav className='Menu'>
-            <a href='/'>
+            <Link to='/'>
                 <img alt='AluraFlix' className='Logo' src={Logo} />
-            </a>
-            <ButtonLink className='ButtonLink' href='/'>
+            </Link>
+            <ButtonLink as={Link} className='ButtonLink' to='/cadastro/video'>
                 Novo vídeo
             </ButtonLink>
         </nav>

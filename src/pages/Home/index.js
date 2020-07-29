@@ -1,12 +1,12 @@
 // React
 import React from 'react';
 // Components
-import BannerMain from './components/BannerMain';
-import Carousel from './components/Carousel';
-import Footer from './components/Footer';
-import Menu from './components/Menu';
+import BannerMain from '../../components/BannerMain';
+import Carousel from '../../components/Carousel';
+import Footer from '../../components/Footer';
+import Menu from '../../components/Menu';
 // Data
-import dadosIniciais from './data/dados_iniciais.json';
+import dadosIniciais from '../../data/dados_iniciais.json';
 
 function App() {
   return (
@@ -30,21 +30,22 @@ function App() {
 
       <Carousel
         category={dadosIniciais.categorias[2]}
-      />      
+      />
 
       <Carousel
         category={dadosIniciais.categorias[3]}
-      />      
+      />
 
       <Carousel
         category={dadosIniciais.categorias[4]}
-      />      
+      />
 
       <Carousel
         category={dadosIniciais.categorias[5]}
-      />      
+      />
 
       <Footer />
+
     </div>
   );
 }
