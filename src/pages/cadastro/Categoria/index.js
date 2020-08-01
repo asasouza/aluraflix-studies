@@ -5,33 +5,29 @@ import { Link } from 'react-router-dom';
 import ButtonLink from '../../../components/ButtonLink';
 import FormField from '../../../components/FormField';
 import PageDefault from '../../../components/PageDefault';
+// Hooks
+import useForm from '../../../hooks/useForm';
+// Repositories
+import categoriaRepository from '../../../repositories/categorias';
 
 const CadastroCategoria = () => {
-  const valoresIniciais = {
-    nome: '',
+  const initialValues = {
+    id: Date.now().toString(),
+    titulo: '',
     descricao: '',
     cor: '#000000',
   };
+  const { clearForm, onChange, values } = useForm(initialValues);
   const [categorias, setCategorias] = useState([]);
-  const [categoria, setCategoria] = useState(valoresIniciais);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setCategorias([...categorias, categoria]);
-    setCategoria(valoresIniciais);
-  };
-
-  const onChange = (event) => {
-    setCategoria({
-      ...categoria,
-      [event.target.getAttribute('name')]: event.target.value,
-    });
+    setCategorias([...categorias, values]);
+    clearForm();
   };
 
   useEffect(() => {
-    const URL = 'http://localhost:8080/categorias';
-    fetch(URL).then(async (res) => {
-      const data = await res.json();
+    categoriaRepository.getAll().then((data) => {
       setCategorias([...data]);
     });
   }, []);
@@ -44,10 +40,10 @@ const CadastroCategoria = () => {
 
         <FormField
           label="Nome da Categoria:"
-          name="nome"
+          name="titulo"
           onChange={onChange}
           type="text"
-          value={categoria.nome}
+          value={values.titulo}
         />
 
         <FormField
@@ -55,7 +51,7 @@ const CadastroCategoria = () => {
           name="descricao"
           onChange={onChange}
           type="textarea"
-          value={categoria.descricao}
+          value={values.descricao}
         />
 
         <FormField
@@ -63,10 +59,10 @@ const CadastroCategoria = () => {
           name="cor"
           onChange={onChange}
           type="color"
-          value={categoria.cor}
+          value={values.cor}
         />
 
-        <ButtonLink as="button">Cadastrar</ButtonLink>
+        <ButtonLink as="button" style={{ background: 'var(--black)' }}>Cadastrar</ButtonLink>
       </form>
 
       {categorias.length === 0 && <div>Loading...</div>}
