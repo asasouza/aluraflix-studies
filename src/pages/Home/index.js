@@ -37,12 +37,15 @@ function Home() {
             </div>
           );
         }
-        return (
-          <Carousel
-            key={category.id}
-            category={category}
-          />
-        );
+        if (category.videos.length > 0) {
+          return (
+            <Carousel
+              key={category.id}
+              category={category}
+            />
+          );
+        }
+        return null;
       })}
 
     </PageDefault>

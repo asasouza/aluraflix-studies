@@ -13,9 +13,9 @@ import videosRepository from '../../../repositories/videos';
 
 const CadastroVideo = () => {
   const initialValues = {
-    titulo: 'Video Padrão',
-    url: 'https://www.youtube.com/watch?v=jjZSSsrZDFY',
-    categoria: 'Front End',
+    titulo: '',
+    url: '',
+    categoria: '',
   };
 
   const history = useHistory();

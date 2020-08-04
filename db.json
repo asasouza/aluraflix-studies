@@ -1,15 +1,6 @@
 {
   "categorias": [
     {
-      "id": 1,
-      "titulo": "Front End",
-      "cor": "#6BD1FF",
-      "link_extra": {
-        "text": "Formação de Front End na Alura",
-        "url": "https://www.alura.com.br/cursos-online-front-end"
-      }
-    },
-    {
       "id": 2,
       "titulo": "Back End",
       "cor": "#00C86F",
@@ -40,51 +31,21 @@
         "text": "Formação de Jogos na Alura",
         "url": "https://www.alura.com.br/cursos-online-front-end"
       }
+    },
+    {
+      "id": "1596496908267",
+      "titulo": "Bando de Dados",
+      "descricao": "Bando de Dados",
+      "cor": "#000000"
+    },
+    {
+      "id": "1596499016278",
+      "titulo": "Front End",
+      "descricao": "Cursos de Front End",
+      "cor": "#ff00ff"
     }
   ],
   "videos": [
-    {
-      "id": 1,
-      "categoriaId": 1,
-      "titulo": "SEO com React",
-      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
-    },
-    {
-      "id": 2,
-      "categoriaId": 1,
-      "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
-      "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
-    },
-    {
-      "id": 3,
-      "categoriaId": 1,
-      "titulo": "Componentização com VanillaJS #AluraMais",
-      "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
-    },
-    {
-      "id": 4,
-      "categoriaId": 1,
-      "titulo": "Pare de chutar e aprenda a display: inline #01",
-      "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
-    },
-    {
-      "id": 5,
-      "categoriaId": 1,
-      "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
-      "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
-    },
-    {
-      "id": 6,
-      "categoriaId": 1,
-      "titulo": "Qual é a melhor linguagem de programação? #HipstersPontoTube",
-      "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w"
-    },
-    {
-      "id": 7,
-      "categoriaId": 1,
-      "titulo": "Novidades do Angular v9",
-      "url": "https://www.youtube.com/watch?v=34uHo7hFmG0"
-    },
     {
       "id": 8,
       "categoriaId": 2,
@@ -204,26 +165,6 @@
       "url": "https://www.youtube.com/watch?v=jjZSSsrZDFY",
       "categoria": 1,
       "id": 27
-    },
-    {
-      "titulo": "Video Padrão",
-      "url": "https://www.youtube.com/watch?v=jjZSSsrZDFY",
-      "categoriaId": 1,
-      "id": 28
-    },
-    {
-      "categoriaId": {
-        "id": 5,
-        "titulo": "Games",
-        "cor": "red",
-        "link_extra": {
-          "text": "Formação de Jogos na Alura",
-          "url": "https://www.alura.com.br/cursos-online-front-end"
-        }
-      },
-      "titulo": "Video Padrão",
-      "url": "https://www.youtube.com/watch?v=jjZSSsrZDFY",
-      "id": 29
     },
     {
       "categoriaId": 3,
